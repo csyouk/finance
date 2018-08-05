@@ -141,9 +141,19 @@ described in `this document
 Jupyter Notebook
 ****************
 
+Running notebook:
+
 .. code::
 
    docker run \
       -p 8888:8888 \
       -v $HOME/jupyter/home:/home/jovyan
       jupyter/base-notebook
+
+Installing Python packages in the notebook:
+
+.. code::
+
+   import sys
+   !{sys.executable} -m pip install -r https://raw.githubusercontent.com/suminb/finance/develop/requirements.txt
+   !{sys.executable} -m pip install https://github.com/suminb/finance/archive/develop.zip
