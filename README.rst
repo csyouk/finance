@@ -137,3 +137,13 @@ Refer `this document <https://docs.travis-ci.com/user/sonarcloud/>`_ for more
 details. Then you will need to set up ``sonar-project.properties`` file as
 described in `this document
 <https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner>`_.
+
+Jupyter Notebook
+****************
+
+.. code::
+
+   docker run \
+      -p 8888:8888 \
+      -v $HOME/jupyter/home:/home/jovyan
+      jupyter/base-notebook
